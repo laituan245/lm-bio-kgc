@@ -16,7 +16,7 @@ dependencies:
 - scikit-learn
 - pytorch==1.6.0
 - tqdm
-- transformers==3.3.1
+- transformers==4.18.0
 - pip:
     - accelerate
     - beautifulsoup4

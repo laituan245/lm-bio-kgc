@@ -23,7 +23,7 @@ import model as model_classes
 from dataloader import TrainDataset, BidirectionalOneShotIterator
 from evaluate import evaluate_ranking, evaluate_variable_negatives
 from preprocess import get_count, add_node_offsets, calculate_valid_negatives
-from util import NegativeSamplingLoss, sample_graph
+from util import NegativeSamplingLoss, sample_graph, get_n_params, get_n_trainable_params
 
 
 def parse_args(args=None):
@@ -40,7 +40,7 @@ def parse_args(args=None):
                         help='info file for entities')
     parser.add_argument('--relations_filename', type=str, default=None,
                         help='info file for relations')
-    parser.add_argument('--model', default='pubmedbert', type=str,
+    parser.add_argument('--model', default='biobert', type=str,
                         help='which BERT encoder to use')
     parser.add_argument('--encoder-type', type=str, default='KGBERT',
                         help='choice of model class from model.py')
@@ -184,6 +184,9 @@ def setup_logging(savedir):
     """ setup logging to write logs to logfile and console """
 
     log_file = os.path.join(savedir, 'train.log')
+
+    for handler in logging.root.handlers[:]:
+        logging.root.removeHandler(handler)
 
     logging.basicConfig(
         format='%(asctime)s %(levelname)-8s %(message)s',
@@ -349,8 +352,8 @@ def main(args):
         'robertalarge' : 'roberta-large',
         'bioclinicalbert' : 'emilyalsentzer/Bio_ClinicalBERT',
         'biolm' : 'EMBO/bio-lm',
-        'biobert' : 'dmis-lab/biobert-v1.1',
-        'scibert' : 'allenai/scibert_scivocab_uncased'
+        'biobert' : 'dmis-lab/biobert-base-cased-v1.2',
+        'scibert' : 'allenai/scibert_scivocab_cased'
     }
 
     # retrieve huggingface model name
@@ -458,6 +461,8 @@ def main(args):
     model = Model(args)
     if not args.use_accelerate:
         model = model.to(device)
+    print('Number of model parameters: {}'.format(get_n_params(model)))
+    print('Number of trainable model parameters: {}'.format(get_n_trainable_params(model)))
 
     # initialize model from file (different from initializing from saved
     # checkpoint, which also includes optimizer state and training step)
@@ -774,6 +779,8 @@ def main(args):
                             'optimizer' : optimizer.state_dict(),
                             'step' : global_step + 1},
                            os.path.join(savedir, 'checkpoint.pt'))
+                # saving adapter
+                model.encoder.save_adapter(f'adapter-{args.model}', args.dataset)
 
                 # keep track of best metric, save model if current is best
                 if args.save_metric is not None:

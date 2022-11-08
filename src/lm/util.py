@@ -6,6 +6,26 @@ import torch
 import torch.nn.functional as F
 import transformers
 
+# Get total number of parameters in a model
+def get_n_params(model):
+    pp=0
+    for p in list(model.parameters()):
+        nn=1
+        for s in list(p.size()):
+            nn = nn*s
+        pp += nn
+    return pp
+
+# Get number of trainable parameters in a model
+def get_n_trainable_params(model):
+    pp=0
+    for p in list(model.parameters()):
+        if p.requires_grad:
+            nn=1
+            for s in list(p.size()):
+                nn = nn*s
+            pp += nn
+    return pp
 
 class MLP(torch.nn.Module):
     """ class that defines a simple multilayer perception with NUM_LAYERS
@@ -120,7 +140,7 @@ def tokenize(x, tokenizer, tokenized=False, biencoder=False, max_length=128):
     sep = tokenizer.sep_token_id
 
     # set token type IDs, which should both be zero for RoBERTa
-    if isinstance(tokenizer, transformers.tokenization_roberta.RobertaTokenizer):
+    if isinstance(tokenizer, transformers.models.roberta.tokenization_roberta.RobertaTokenizer):
         type_id0, type_id1 = 0, 0
     else:
         type_id0, type_id1 = 0, 1
