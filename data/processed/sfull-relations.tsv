@@ -1,0 +1,230 @@
+	id	name	type
+0	0	has component	has-component
+1	1	has measured component	has-measured-component
+2	2	disposition of	disposition-of
+3	3	has causative agent	has-causative-agent
+4	4	replaces	replaces
+5	5	replaced by	replaced-by
+6	6	has active ingredient	has-active-ingredient
+7	7	has basis of strength substance	has-basis-of-strength-substance
+8	8	has precise active ingredient	has-precise-active-ingredient
+9	9	active ingredient of	active-ingredient-of
+10	10	has process output	has-process-output
+11	11	has modification	has-modification
+12	12	has direct substance	has-direct-substance
+13	13	is modification of	is-modification-of
+14	14	has finding site	has-finding-site
+15	15	has direct procedure site	has-direct-procedure-site
+16	16	has procedure site	has-procedure-site
+17	17	has indirect procedure site	has-indirect-procedure-site
+18	18	entire anatomy structure of	entire-anatomy-structure-of
+19	19	possibly equivalent to	possibly-equivalent-to
+20	20	has specimen source topography	has-specimen-source-topography
+21	21	moved from	moved-from
+22	22	temporal context of	temporal-context-of
+23	23	finding context of	finding-context-of
+24	24	subject relationship context of	subject-relationship-context-of
+25	25	associated finding of	associated-finding-of
+26	26	finding site of	finding-site-of
+27	27	definitional manifestation of	definitional-manifestation-of
+28	28	has associated finding	has-associated-finding
+29	29	associated morphology of	associated-morphology-of
+30	30	finding method of	finding-method-of
+31	31	pathological process of	pathological-process-of
+32	32	is interpreted by	is-interpreted-by
+33	33	has definitional manifestation	has-definitional-manifestation
+34	34	has occurrence	has-occurrence
+35	35	due to	due-to
+36	36	has associated morphology	has-associated-morphology
+37	37	has direct morphology	has-direct-morphology
+38	38	has focus	has-focus
+39	39	has indirect morphology	has-indirect-morphology
+40	40	interpretation of	interpretation-of
+41	41	role played by	role-played-by
+42	42	occurs after	occurs-after
+43	43	clinical course of	clinical-course-of
+44	44	course of	course-of
+45	45	occurs before	occurs-before
+46	46	causative agent of	causative-agent-of
+47	47	procedure site of	procedure-site-of
+48	48	intent of	intent-of
+49	49	method of	method-of
+50	50	has procedure morphology	has-procedure-morphology
+51	51	has specimen source morphology	has-specimen-source-morphology
+52	52	interprets	interprets
+53	53	uses	uses
+54	54	dose form of	dose-form-of
+55	55	associated with	associated-with
+56	56	cause of	cause-of
+57	57	direct procedure site of	direct-procedure-site-of
+58	58	uses substance	uses-substance
+59	59	has associated etiologic finding	has-associated-etiologic-finding
+60	60	associated etiologic finding of	associated-etiologic-finding-of
+61	61	part anatomy structure of	part-anatomy-structure-of
+62	62	device used by	device-used-by
+63	63	direct device of	direct-device-of
+64	64	used by	used-by
+65	65	onset of	onset-of
+66	66	has associated procedure	has-associated-procedure
+67	67	laterality of	laterality-of
+68	68	has method	has-method
+69	69	has direct device	has-direct-device
+70	70	uses device	uses-device
+71	71	route of administration of	route-of-administration-of
+72	72	direct substance of	direct-substance-of
+73	73	indirect procedure site of	indirect-procedure-site-of
+74	74	has route of administration	has-route-of-administration
+75	75	occurs in	occurs-in
+76	76	subject of information of	subject-of-information-of
+77	77	has specimen procedure	has-specimen-procedure
+78	78	has recipient category	has-recipient-category
+79	79	component of	component-of
+80	80	has specimen substance	has-specimen-substance
+81	81	realization of	realization-of
+82	82	temporally followed by	temporally-followed-by
+83	83	measured component of	measured-component-of
+84	84	severity of	severity-of
+85	85	temporally follows	temporally-follows
+86	86	access instrument of	access-instrument-of
+87	87	access of	access-of
+88	88	approach of	approach-of
+89	89	instrumentation of	instrumentation-of
+90	90	focus of	focus-of
+91	91	during	during
+92	92	direct morphology of	direct-morphology-of
+93	93	inheres in	inheres-in
+94	94	has specimen source identity	has-specimen-source-identity
+95	95	access device used by	access-device-used-by
+96	96	specimen of	specimen-of
+97	97	finding informer of	finding-informer-of
+98	98	has finding method	has-finding-method
+99	99	has direct site	has-direct-site
+100	100	technique of	technique-of
+101	101	scale type of	scale-type-of
+102	102	characterized by	characterized-by
+103	103	process duration of	process-duration-of
+104	104	property of	property-of
+105	105	measures	measures
+106	106	has inherent attribute	has-inherent-attribute
+107	107	has associated function	has-associated-function
+108	108	property type of	property-type-of
+109	109	has indirect device	has-indirect-device
+110	110	has property type	has-property-type
+111	111	has property	has-property
+112	112	has entire anatomy structure	has-entire-anatomy-structure
+113	113	has procedure device	has-procedure-device
+114	114	relative to part of	relative-to-part-of
+115	115	substance used by	substance-used-by
+116	116	procedure device of	procedure-device-of
+117	117	associated procedure of	associated-procedure-of
+118	118	procedure context of	procedure-context-of
+119	119	specimen source topography of	specimen-source-topography-of
+120	120	specimen substance of	specimen-substance-of
+121	121	specimen procedure of	specimen-procedure-of
+122	122	state of matter of	state-of-matter-of
+123	123	has dose form	has-dose-form
+124	124	has basic dose form	has-basic-dose-form
+125	125	priority of	priority-of
+126	126	has subject relationship context	has-subject-relationship-context
+127	127	has measurement method	has-measurement-method
+128	128	wound has communication with	wound-has-communication-with
+129	129	has pathological process	has-pathological-process
+130	130	has subject of information	has-subject-of-information
+131	131	recipient category of	recipient-category-of
+132	132	extent of	extent-of
+133	133	uses access device	uses-access-device
+134	134	indirect morphology of	indirect-morphology-of
+135	135	has interpretation	has-interpretation
+136	136	process output of	process-output-of
+137	137	energy used by	energy-used-by
+138	138	uses energy	uses-energy
+139	139	has access instrument	has-access-instrument
+140	140	measurement method of	measurement-method-of
+141	141	basic dose form of	basic-dose-form-of
+142	142	dose form intended site of	dose-form-intended-site-of
+143	143	dose form administration method of	dose-form-administration-method-of
+144	144	dose form release characteristic of	dose-form-release-characteristic-of
+145	145	dose form transformation of	dose-form-transformation-of
+146	146	has state of matter	has-state-of-matter
+147	147	procedure morphology of	procedure-morphology-of
+148	148	measured by	measured-by
+149	149	surgical approach of	surgical-approach-of
+150	150	inverse during	inverse-during
+151	151	has instrumentation	has-instrumentation
+152	152	has procedure context	has-procedure-context
+153	153	has access	has-access
+154	154	direct site of	direct-site-of
+155	155	moved to	moved-to
+156	156	revision status of	revision-status-of
+157	157	characterizes	characterizes
+158	158	temporally related to	temporally-related-to
+159	159	has technique	has-technique
+160	160	indirect device of	indirect-device-of
+161	161	episodicity of	episodicity-of
+162	162	has revision status	has-revision-status
+163	163	has approach	has-approach
+164	164	has surgical approach	has-surgical-approach
+165	165	has priority	has-priority
+166	166	has specimen	has-specimen
+167	167	has intent	has-intent
+168	168	time aspect of	time-aspect-of
+169	169	has severity	has-severity
+170	170	has laterality	has-laterality
+171	171	has location	has-location
+172	172	has extent	has-extent
+173	173	has course	has-course
+174	174	has clinical course	has-clinical-course
+175	175	has finding context	has-finding-context
+176	176	has onset	has-onset
+177	177	has concentration strength denominator value	has-concentration-strength-denominator-value
+178	178	has count of base of active ingredient	has-count-of-base-of-active-ingredient
+179	179	has presentation strength denominator value	has-presentation-strength-denominator-value
+180	180	has presentation strength numerator value	has-presentation-strength-numerator-value
+181	181	has concentration strength numerator value	has-concentration-strength-numerator-value
+182	182	has scale type	has-scale-type
+183	183	has stage	has-stage
+184	184	has part anatomy structure	has-part-anatomy-structure
+185	185	has inherent location	has-inherent-location
+186	186	has precondition	has-precondition
+187	187	has time aspect	has-time-aspect
+188	188	location of	location-of
+189	189	basis of strength substance of	basis-of-strength-substance-of
+190	190	precise active ingredient of	precise-active-ingredient-of
+191	191	concentration strength denominator value of	concentration-strength-denominator-value-of
+192	192	count of base of active ingredient of	count-of-base-of-active-ingredient-of
+193	193	concentration strength numerator unit of	concentration-strength-numerator-unit-of
+194	194	concentration strength denominator unit of	concentration-strength-denominator-unit-of
+195	195	concentration strength numerator value of	concentration-strength-numerator-value-of
+196	196	presentation strength denominator value of	presentation-strength-denominator-value-of
+197	197	presentation strength numerator unit of	presentation-strength-numerator-unit-of
+198	198	presentation strength numerator value of	presentation-strength-numerator-value-of
+199	199	presentation strength denominator unit of	presentation-strength-denominator-unit-of
+200	200	unit of presentation of	unit-of-presentation-of
+201	201	has process duration	has-process-duration
+202	202	has temporal context	has-temporal-context
+203	203	has episodicity	has-episodicity
+204	204	precondition of	precondition-of
+205	205	associated function of	associated-function-of
+206	206	specimen source morphology of	specimen-source-morphology-of
+207	207	has presentation strength numerator unit	has-presentation-strength-numerator-unit
+208	208	has concentration strength numerator unit	has-concentration-strength-numerator-unit
+209	209	has concentration strength denominator unit	has-concentration-strength-denominator-unit
+210	210	has presentation strength denominator unit	has-presentation-strength-denominator-unit
+211	211	specimen source identity of	specimen-source-identity-of
+212	212	stage of	stage-of
+213	213	has communication with wound	has-communication-with-wound
+214	214	has disposition	has-disposition
+215	215	has dose form intended site	has-dose-form-intended-site
+216	216	part referred to by	part-referred-to-by
+217	217	has finding informer	has-finding-informer
+218	218	has units	has-units
+219	219	has dose form administration method	has-dose-form-administration-method
+220	220	inherent location of	inherent-location-of
+221	221	has realization	has-realization
+222	222	dependent of	dependent-of
+223	223	has dependent	has-dependent
+224	224	has unit of presentation	has-unit-of-presentation
+225	225	has dose form transformation	has-dose-form-transformation
+226	226	has dose form release characteristic	has-dose-form-release-characteristic
+227	227	plays role	plays-role
+228	228	units of	units-of

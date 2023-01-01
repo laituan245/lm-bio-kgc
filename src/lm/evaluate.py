@@ -48,7 +48,7 @@ def parse_args(args=None):
                         help='batch size for test dataset')
     parser.add_argument('--subgraph', type=str, required=True,
                         help='precomputed subgraph to use')
-    parser.add_argument('--num_neg_samples', type=int, default=500,
+    parser.add_argument('--num_neg_samples', type=int, default=100,
                         help='number of negative samples to use')
     parser.add_argument('--output_to_use', type=str, default='ranking_outputs',
                         choices=['link_outputs', 'ranking_outputs'],
