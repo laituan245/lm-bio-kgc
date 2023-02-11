@@ -40,7 +40,7 @@ def parse_args(args=None):
                         help='info file for entities')
     parser.add_argument('--relations_filename', type=str, default=None,
                         help='info file for relations')
-    parser.add_argument('--model', default='biobert', type=str,
+    parser.add_argument('--model', default='biobert-v1.1', type=str,
                         help='which BERT encoder to use')
     parser.add_argument('--encoder-type', type=str, default='KGBERT',
                         help='choice of model class from model.py')
@@ -352,7 +352,8 @@ def main(args):
         'robertalarge' : 'roberta-large',
         'bioclinicalbert' : 'emilyalsentzer/Bio_ClinicalBERT',
         'biolm' : 'EMBO/bio-lm',
-        'biobert' : 'dmis-lab/biobert-base-cased-v1.2',
+        'biobert-v1.1': 'dmis-lab/biobert-v1.1',
+        'biobert-base-cased-v1.2' : 'dmis-lab/biobert-base-cased-v1.2',
         'scibert' : 'allenai/scibert_scivocab_cased'
     }
 
