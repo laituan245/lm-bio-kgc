@@ -792,6 +792,8 @@ def main(args):
                         torch.save({'model' : state_dict,
                                     'step' : global_step + 1},
                                    os.path.join(savedir, 'best_model.pt'))
+                        # saving adapter
+                        model.encoder.save_adapter(f'best-adapter-{args.model}', args.dataset)
 
                         # save best metrics
                         metrics = {k : v.mean().item()
