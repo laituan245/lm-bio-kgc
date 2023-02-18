@@ -140,7 +140,8 @@ def tokenize(x, tokenizer, tokenized=False, biencoder=False, max_length=128):
     sep = tokenizer.sep_token_id
 
     # set token type IDs, which should both be zero for RoBERTa
-    if isinstance(tokenizer, transformers.models.roberta.tokenization_roberta.RobertaTokenizer):
+    #if isinstance(tokenizer, transformers.models.roberta.tokenization_roberta.RobertaTokenizer):
+    if 'Roberta' in str(type(tokenizer)):
         type_id0, type_id1 = 0, 0
     else:
         type_id0, type_id1 = 0, 1
@@ -344,4 +345,3 @@ def sample_graph(triples, fraction):
         elif isinstance(value, np.ndarray):
             sampled_triples[key] = value[indices]
     return sampled_triples
-
