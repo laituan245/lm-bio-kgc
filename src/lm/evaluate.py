@@ -395,9 +395,9 @@ def evaluate_ranking(model, tokenizer, triples, info_filename, device,
 
     # compute scores for negative triples, head batch
     for batch in tqdm(loader, desc='negative, head batch'):
-        indices = zip(head_neg[batch].tolist(), tail[inds[batch]].tolist())
-        indices = torch.stack([head_neg[batch], tail[inds[batch]]], dim=1)
-        relations = relation[inds[batch]]
+        indices = zip(head_neg[batch].tolist(), tail[inds[batch].cpu()].tolist())
+        indices = torch.stack([head_neg[batch], tail[inds[batch].cpu()]], dim=1)
+        relations = relation[inds[batch].cpu()]
         inputs = [retriever.get_text(a, b, c)
                   for (a, c), b in zip(indices.tolist(), relations.tolist())]
         labels = torch.zeros_like(relations)
@@ -419,9 +419,9 @@ def evaluate_ranking(model, tokenizer, triples, info_filename, device,
 
     # compute scores for negative triples, tail batch
     for batch in tqdm(loader, desc='negative, tail batch'):
-        indices = zip(head[inds[batch]].tolist(), tail_neg[batch].tolist())
-        indices = torch.stack([head[inds[batch]], tail_neg[batch]], dim=1)
-        relations = relation[inds[batch]]
+        indices = zip(head[inds[batch].cpu()].tolist(), tail_neg[batch].tolist())
+        indices = torch.stack([head[inds[batch].cpu()], tail_neg[batch]], dim=1)
+        relations = relation[inds[batch].cpu()]
         inputs = [retriever.get_text(a, b, c)
                   for (a, c), b in zip(indices.tolist(), relations.tolist())]
         labels = torch.zeros_like(relations)
