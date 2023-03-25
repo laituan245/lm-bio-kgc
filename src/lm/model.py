@@ -8,7 +8,7 @@ import torch.nn.functional as F
 from transformers import AutoTokenizer, AutoModel
 
 from util import MLP, ComplEx, DistMult, RotatE, TransE
-from transformers.adapters.configuration import PfeifferConfig
+from transformers.adapters.configuration import ParallelConfig
 
 class KGBERT(torch.nn.Module):
     """ BERT-based encoder with linear layer on top of CLS token for
@@ -24,7 +24,7 @@ class KGBERT(torch.nn.Module):
         self.encoder = AutoModel.from_pretrained(self.model)
         hidden_size = self.encoder.config.hidden_size
 
-        adapter_config = PfeifferConfig(reduction_factor=4)
+        adapter_config = ParallelConfig()
         self.encoder.add_adapter(args.dataset, config=adapter_config)
         self.encoder.train_adapter(args.dataset)
         self.encoder.set_active_adapters([args.dataset])
